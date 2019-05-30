@@ -2,10 +2,10 @@
   <v-container fluid grid-list-xl>
     <v-layout row wrap text-xs-center>
       <v-flex xl1 md2 sm6 xs12 v-for="(item, index) in charactes" :key="index">
-        <v-container v-if="item.type === 'ADDON'">
+        <v-container id="addonContainer" v-if="item.type === 'ADDON'">
           <v-card
             v-if="item.id === 'RELOAD'"
-            v-on:click="loadMore($event)"
+            v-on:click="loadMore()"
             min-height="100%"
             class="red white--text"
           >
@@ -82,14 +82,13 @@ export default {
     this.getCharacters();
   },
   methods: {
-    loadMore: function(event) {
-      event.target.parentElement.parentElement.parentElement.remove();
+    loadMore: function() {
+      document.getElementById("addonContainer").parentElement.remove();
       this.getCharacters();
     },
     getStandardImage: function(url) {
       var result = `${url}/standard_fantastic.jpg`;
       // console.log(result);
-
       return result;
     },
     getCharacters: function() {
@@ -99,7 +98,6 @@ export default {
             this.nextOffset
           }&apikey=${public_key}`
         )
-        // axios.get(`https://gateway.marvel.com/v1/public/characters?orderBy=name&apikey=${public_key}`)
         .then(result => {
           this.nextOffset = result.data.data.offset + 20;
           result.data.data.results.forEach(element => {
