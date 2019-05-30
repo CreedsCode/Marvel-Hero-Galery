@@ -1,30 +1,25 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
+    <v-toolbar class="red" app>
+      <v-toolbar-title class="white--text">Marvel Heros</v-toolbar-title>
     </v-toolbar>
-
     <v-content>
-      <router-view />
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
     </v-content>
+    <v-footer height="auto" class="white--text red" app>
+      <v-flex text-xs-center white--text xs12>
+        Data provided by Marvel. <strong>MARVEL</strong> — &copy; 2019
+      </v-flex>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 export default {
   name: "App",
+
   data() {
     return {
       //
