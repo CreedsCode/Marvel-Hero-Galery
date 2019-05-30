@@ -68,14 +68,14 @@ export default {
   data() {
     return {
       charactes: [],
-      nextOffset: 0,
-      dropdown_items: [
-        { text: "100%" },
-        { text: "75%" },
-        { text: "50%" },
-        { text: "25%" },
-        { text: "0%" }
-      ]
+      nextOffset: 0
+      // dropdown_items: [
+      //   { text: "100%" },
+      //   { text: "75%" },
+      //   { text: "50%" },
+      //   { text: "25%" },
+      //   { text: "0%" }
+      // ]
     };
   },
   mounted() {

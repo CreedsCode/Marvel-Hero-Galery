@@ -1,4 +1,8 @@
-# creedscode.marvelherogalery.vuejs
+# Marvel-Hero-Galery
+
+## env
+Set VUE_APP_PUBLIC_KEY & VUE_APP_PRIVATE_KEY
+from the marvel api:  https://developer.marvel.com/
 
 ## Project setup
 ```
@@ -27,3 +31,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Todo:
+Charactes page.
