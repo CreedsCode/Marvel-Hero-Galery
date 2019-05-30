@@ -1,15 +1,22 @@
 <template>
-  <div>
-    <h3>Hello detailed page</h3>
-    <p>{{ this.$route.params.id }}</p>
+  <v-layout row>
+    <v-flex xs12 sm6 offset-sm3>
+      <v-card color="red">
+        <v-img
+          :aspect-ratio="16 / 9"
+          :src="this.getImage(character[0].thumbnail.path)"
+        >
+        </v-img>
 
-    <ul>
-      <li v-for="(item, index) in character" :key="index">
-        {{ item.name }}
-        {{ item.description }}
-      </li>
-    </ul>
-  </div>
+        <v-card-title primary-title>
+          <div>
+            <div class="headline white--text">{{ this.character[0].name }}</div>
+            <span class="white--text">{{ this.character[0].description }}</span>
+          </div>
+        </v-card-title>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -22,10 +29,15 @@ export default {
       character: []
     };
   },
-  mounted() {
+  beforeMount() {
     this.getCharacter();
   },
   methods: {
+    getImage: function(url) {
+      var result = `${url}/detail.jpg`;
+      // console.log(result);
+      return result;
+    },
     getCharacter: function() {
       var characterId = this.$route.params.id;
       axios
