@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <v-toolbar class="red" app>
-      <v-toolbar-title class="white--text">Marvel Heroes</v-toolbar-title>
+      <v-toolbar-title class="white--text"
+        >Marvel Heroes Galery</v-toolbar-title
+      >
     </v-toolbar>
     <v-content>
       <v-container fluid>
