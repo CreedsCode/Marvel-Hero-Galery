@@ -1,5 +1,4 @@
-# Marvel-Hero-Galery
-
+# Marvel Heroes Galery
 ## env
 Set VUE_APP_PUBLIC_KEY & VUE_APP_PRIVATE_KEY
 from the marvel api:  https://developer.marvel.com/
